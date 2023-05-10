@@ -21,6 +21,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # Apps
+    'authentication.apps.AuthenticationConfig',
+    'general.apps.GeneralConfig',
+    'dashboard.apps.DashboardConfig',
+
+    # Tools
+    'django_ace',
 ]
 
 MIDDLEWARE = [
@@ -114,3 +122,8 @@ MEDIA_ROOT = BASE_DIR / 'static_cdn' / 'media_root'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+AUTH_USER_MODEL = "authentication.EditedUser"
+
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'

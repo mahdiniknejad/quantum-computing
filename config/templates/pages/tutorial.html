@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>QuCTech</title>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+    </script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+    ></script>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="QuCTech" name="keywords" />
+    <meta content="QuCTech" name="description" />
+
+    <!-- Favicon -->
+    <link href="../img/favicon.ico" rel="icon" />
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Libraries Stylesheet -->
+    <link
+      href="../lib/owlcarousel/assets/owl.carousel.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="../css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-dark">
+      <div class="row py-2 px-lg-5">
+        <div class="col-lg-6 text-center text-lg-left mb-2 mb-lg-0">
+          <div class="d-inline-flex align-items-center text-white">
+            <!-- <small><i class="fa fa-phone-alt mr-2"></i>+98 912 688 9980</small>
+            <small class="px-3">|</small> -->
+            <small
+              ><i class="fa fa-envelope mr-2"></i
+              ><a
+                href="mailto:quantum@quctech.com"
+                class="text-light"
+                >quantum@quctech.com</a
+              ></small
+            >
+          </div>
+        </div>
+        <div class="col-lg-6 text-center text-lg-right">
+          <div class="d-inline-flex align-items-center">
+            <a
+              class="text-white px-2"
+              href="https://www.facebook.com/Quctech-100643789432253"
+              target="_blank"
+            >
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a
+              class="text-white px-2"
+              href="https://twitter.com/QuCTech"
+              target="_blank"
+            >
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a
+              class="text-white px-2"
+              href="https://www.linkedin.com/company/quctech"
+              target="_blank"
+            >
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a class="text-white px-2" href="">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a
+              class="text-white pl-2"
+              href="https://www.youtube.com/channel/UC4PoMuy30Lk55dbGOzzAbXQ"
+              target="_blank"
+            >
+              <i class="fab fa-youtube"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Topbar End -->
+
+    <!-- Navbar Start -->
+    <div class="container-fluid p-0">
+      <nav
+        class="navbar navbar-expand-lg bg-light shadow-lg navbar-light py-3 py-lg-0 px-lg-5"
+      >
+        <button
+          type="button"
+          class="navbar-toggler"
+          data-toggle="collapse"
+          data-target="#navbarCollapse"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-between px-lg-3"
+          id="navbarCollapse"
+        >
+          <div class="navbar-nav m-auto py-0">
+            <a href="../index.html" class="nav-item nav-link">Home</a>
+            <div class="nav-item dropdown">
+              <a
+                href="#"
+                class="nav-link dropdown-toggle"
+                data-toggle="dropdown"
+                >Solutions</a
+              >
+              <div class="dropdown-menu rounded-0 m-0">
+                  <a href="solution items/why quantum control.html"
+                     class="dropdown-item">
+                      <img src="../img/Atom1.png"
+                           alt=""
+                           style="border: 0; width: 20px; height: 20px" />
+                      Why Quantum Control for Quantum Technology?
+                  </a>
+                <a
+                  href="solution items/our quantum control.html"
+                  class="dropdown-item"
+                  ><img
+                    src="../img/Atom2.png"
+                    alt=""
+                    style="border: 0; width: 20px; height: 20px"
+                  />
+                  Our Qubits Control Strategies</a
+                >
+                <a
+                  href="solution items/solutions for quantum.html"
+                  class="dropdown-item"
+                  ><img
+                    src="../img/Atom3.png"
+                    alt=""
+                    style="border: 0; width: 20px; height: 20px"
+                  />
+                  Solutions for Quantum Computers</a
+                >
+                <a
+                  href="solution items/some solutions.html"
+                  class="dropdown-item"
+                  ><img
+                    src="../img/Atom4.png"
+                    alt=""
+                    style="border: 0; width: 20px; height: 20px"
+                  />
+                  Some Solutions for Quantum Sensing</a
+                >
+              </div>
+            </div>
+            <div class="nav-item dropdown">
+              <a
+                href="#"
+                class="nav-link dropdown-toggle"
+                data-toggle="dropdown"
+                >Products</a
+              >
+              <div class="dropdown-menu rounded-0 m-0">
+                  <a href="product items/python quantum.html"
+                     class="dropdown-item">
+                      <img src="../img/Products/Python-Cloud.png"
+                           alt=""
+                           style="border: 0; width: 20px; height: 20px" />
+                      Python Quantum Toolbox
+                  </a>
+                  <a href="product items/fpga quantum.html" class="dropdown-item">
+                      <img src="../img/Products/FPGA-Quantum-IPCores.png"
+                           alt=""
+                           style="border: 0; width: 20px; height: 20px" />
+                      FPGA Quantum IP Cores
+                  </a>
+                  <a href="product items/Quantum_OS.html"
+                     class="dropdown-item">
+                      <img src="../img/Products/Quantum-OS.png"
+                           alt=""
+                           style="border: 0; width: 20px; height: 20px" />
+                      Quantum Operating System
+                  </a>
+                  <a href="product items/contract quctech.html"
+                     class="dropdown-item">
+                      <img src="../img/Products/Contract-QuCTech.png"
+                           alt=""
+                           style="border: 0; width: 20px; height: 20px" />
+                      Contract QuCTech
+                  </a>
+
+              </div>
+            </div>
+            <a href="tutorial.html" class="nav-item nav-link active"
+              >Tutorial</a
+            >
+            <a href="our teams.html" class="nav-item nav-link">Our Team</a>
+            <!-- <a href="contact.html" class="nav-item nav-link">Contact</a> -->
+            <a href="try simulation.html" class="nav-item nav-link"
+              >Try Simulation</a
+            >
+            <a
+              href="https://github.com/Quantum-Control-Technology"
+              class="nav-item nav-link showGithubNavLink"
+              target="_blank"
+              >Github</a
+            >
+          </div>
+          <a
+            href="https://github.com/Quantum-Control-Technology"
+            class="btn btn-primary py-2 px-4 d-none d-lg-block"
+            target="_blank"
+            >Github</a
+          >
+        </div>
+      </nav>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Tutorial -->
+    <div class="container-fluid py-5">
+      <div class="container-fluid pt-5">
+        <div class="container">
+          <div class="text-center pb-2">
+            <h2 class="text-primary text-uppercase font-weight-bold">
+              Quantum Dynamics, Control and Processor
+            </h2>
+          </div>
+          <div class="container">
+            <h4>Quantum Dynamics</h4>
+            <p>
+              An open quantum system is a quantum-mechanical system that
+              interacts with an external quantum system, which is known as the
+              bath or environment. Closed quantum systems are free from
+              environmental effects such as leakage errors, decoherence, and
+              quantum noises, and wise versa open systems can be affected by the
+              environment. In the next subsections, we briefly introduce the
+              dynamics of these two categories of quantum systems.
+            </p>
+            <p>
+              In this section, the Dirac notation column vector 'ket'
+              $|\psi_t\rangle$ is called the quantum state. The
+              conjugate-transpose ($\dagger$) of 'ket' vector which is a row
+              vector is called 'Bra' $\langle\psi_t|=|\psi_t\rangle^{\dagger}$
+              in Dirac notation. By $^{T}$ and $^{\ast}$ we will show the
+              transpose and complex conjugate of a matrix, respectively.
+            </p>
+            <p>
+              <b>Closed Quantum System Dynamics:</b> Basically, closed system
+              dynamics describes by the well-known Schrödinger equation as:
+            </p>
+            <p>
+              $ \frac{d|\psi_t\rangle}{dt}=-\frac{i}{\hbar}H(t)|\psi_t\rangle $
+            </p>
+            <p>
+              in which $i=\sqrt{-1}$ and $\hbar$ is reduced Plank constant and
+              we will absorb it in Hamiltonian, we set $\hbar \equiv 1$ and
+              using the atomic unit. $H(t)$ is time dependent total Hamiltonian
+              that can be written as the sum of quantum system internal
+              Hamiltonian $H_0$ and control signals Hamiltonian
+              $H_c(t)=\sum_{n=1}^{p }H_n u_n(t)$ in which $p$ is the number of
+              control signals or equivalently the number of control
+              Hamiltonians. The solution of Schrödinger equation is
+              $|\psi_t\rangle=U_t|\psi_0\rangle$ in which $|\psi_0\rangle$ is
+              the initial state and the the unitary operator is:
+            </p>
+            <p>$ U_t=e^{-i\int_0^t H(\tau)d\tau} $</p>
+            <p>
+              for very small time interval $dt=\delta t\rightarrow 0$, then the
+              intermediate times are $t_k=t_0+k\delta t$,and the Hamiltonian at
+              these intermediate times takes on the forms
+              $\hat{H}_k=H(t_k)=H_0+\sum_{n=1}^{p} H_n u_{n}(t_k)$, then the
+              time-evolution of quantum system at time step $k$ can be described
+              by propagator $U_k$ decomposed as
+            </p>
+            <p>
+              $ U_k=\mathcal{M}_k \mathcal{M}_{k-1}...\mathcal{M}_1 \quad ,\quad
+              \mathcal{M}_k=e^{-i\hat{H}_k\delta t} $
+            </p>
+            <p>
+              and the quantum state at time-step $k$ is: $|\psi_k\rangle=U_k
+              |\psi_0\rangle$.
+            </p>
+            <p>
+              Von-Neumann had defined a new quantum state called density matrix
+              as $\rho_t=|\psi_t\rangle \langle\psi_t|$, in this definition the
+              Schrödinger equation replaced by Von-Neumann equation for a closed
+              quantum systems including the Hamiltonian $H_S$ as:
+            </p>
+            <p>$ \frac{d\rho_t}{dt}=-i[H_S(t),\rho_t] $</p>
+            <p>
+              in which $[O_1,O_2]=O_1O_2-O_2O_1$ is the commutator between two
+              quantum operators $O_1,O_2$. The solution of Von-Neumann equation
+              for initial density matrix $\rho_0$ via aforementioned unitary
+              operator is $\rho_{k}=U_k\rho_0 U_k^{\dagger}$. Density matrix has
+              some properties as: $\mathrm{Tr}(\rho)=1,
+              0<\mathrm{Tr}(\rho^2)\leqslant 1$.
+            </p>
+            <p>
+              <b>Open Quantum System Dynamics:</b> The open quantum system in
+              which both the measurement and the control embedded in Hamiltonian
+              formulated by Lindblad master equation as:
+            </p>
+            <p>
+              $ \dot{\rho}_t=\mathcal{L}\rho_t=-i[H(t),\rho_t]+\sum_{l=1}^{q}
+              \gamma_l\mathcal{D}[L_l]\rho_t $
+            </p>
+            <p>
+              in this equation, $\mathcal{L}$ is the so-called Liouvillian
+              superoperator. The second term expresses the influence of the
+              environment with rates $\gamma_l$ and dissipators
+              $\mathcal{D}[L_l]\rho_t=
+              L_l\rho_{t}L_l^{\dagger}-\frac{1}{2}(L_lL_l^{\dagger}\rho_{t}+\rho_{t}L_lL_l^{\dagger})$.
+              Some examples of environment effect on quantum systems are
+              relaxation, dephasing, decoherence, leakage, etc. Stochastic
+              Schrodinger Equation (SSE) for quantum state vector is:
+            </p>
+            <p>
+              $ d|\psi_t\rangle=\Big(-iH(t)+\langle L^{\dagger}\rangle
+              L-\frac{_1}{^2}L^{\dagger}L-\frac{_1}{^2}\langle
+              L^{\dagger}\rangle\langle L\rangle\Big)|\psi_t\rangle
+              dt+(L-\langle L\rangle)|\psi_t\rangle dW_t $
+            </p>
+            <p>
+              in which $\langle \mathcal{O}\rangle=\langle
+              \psi_t|\mathcal{O}|\psi_t\rangle$.
+            </p>
+            <p>
+              The interaction of open quantum systems and quantum light can be
+              formulated by quantum stochastic differential equations (QSDE) as:
+            </p>
+            <p>
+              $
+              dU_{t}=\Big(\big(-iH(t)-\frac{1}{2}LL^{\dagger}\big)dt+LdA_{t}^{\dagger}-L^{\dagger}SdA_{t}
+              +(S-I)d\Lambda_{t} \Big) U_{t} , U_{0}=I_S\otimes I_E $
+            </p>
+            <p>
+              that $L$ is measurement operator, $S$ is scattering matrix,
+              $A_{t},A_{t}^{\dagger}$ and $ \Lambda_{t}$ are annihilation,
+              creation and Poisson quantum noises which satisfy quantum Itô
+              rules of noise products as
+              $dA_{t}d\Lambda_{t}=dA_{t},dA_{t}dA_{t}^\dagger=dt,d\Lambda_{t}
+              d\Lambda_{t}=d\Lambda_{t}, d\Lambda_{t}
+              dA_{t}^\dagger=dA_{t}^\dagger$ and the other products are equal to
+              zero. These quantum noises can be written based on annihilation
+              $\mathbf{a}$, creation $\mathbf{a}^{\dagger}$ and number operators
+              $\mathbf{n}=\mathbf{a}^{\dagger}\mathbf{a}$ as $dA=\mathbf{a}dt,
+              dA^{\dagger}=\mathbf{a}^{\dagger}dt$ and $d\Lambda=\mathbf{n}dt$.
+              We remark that QSDE operates in the domain $S\otimes E$ and hence
+              the multiplication between quantum systems operators and quantum
+              noises is the tensor product.
+            </p>
+            <p>
+              The Hamiltonian for open quantum systems interacting with the
+              environment is $H=H_{S}\otimes I_{E}+I_{S}\otimes H_{E}+H_I$ where
+              $H_{S}, H_{E}, H_I$ are system, environment, and interaction
+              Hamiltonian respectively. Quantum observable is a self-adjoin
+              operator $X=X^\dagger$, the time evolution of this operator is
+              $X_{t}=U_{t}^{\dagger}XU_{t}$ which the unitary operator $U_{t}$.
+              The output quantum field operators are described by
+              $A_{out}=U_t^{\dagger} A_t U_t , A_{out}^{\dagger}=U_t^{\dagger}
+              A_t^{\dagger} U_t , \Lambda_{out}=U_t^{\dagger} \Lambda_t U_t$.
+            </p>
+            <p>
+              Also, the quantum stochastic differential equation for density
+              matrix by quantum Itô calculus is:
+            </p>
+            <p>
+              $
+              d\rho_t=\mathcal{L}(\rho_{t})dt+[\rho_t,L^{\dagger}]dA_t+[L,\rho_t]dA^{\dagger}_t
+              $
+            </p>
+            <p>
+              By non-demolition continuous measurement and quantum Itô calculus,
+              the following quantum trajectory (filtering) can be obtained for
+              an open quantum system:
+            </p>
+            <p>
+              $
+              d\rho_{t}=\mathcal{L}(\rho_{t})dt+\mathcal{J}_{L}(\rho_{t})dW_{t}
+              $
+            </p>
+            <p>
+              that
+              $\mathcal{J}_{L}(\rho_{t})=(L\rho_{t}+\rho_{t}L^{\dagger}-\mathrm{Tr}\big((L+L^{\dagger})\rho_t\big)\rho_{t})$
+              is the diffusion coefficient , also
+              $dW_{t}=dY_{t}-\mathrm{Tr}\big((L+L^{\dagger})\rho_t\big) dt$ that
+              $Y_{t}$ is output measurement process and $W_{t}$ is a Wiener
+              process, $(dW_{t})^2=dt$ and $\langle X
+              \rangle=\mathrm{Tr}(\rho_{t}X)$ is the expectation value of an
+              quantum observable.
+            </p>
+            <p>
+              For photon-counting quantum jump, we will have the following
+              stochastic differential equation:
+            </p>
+            <p>
+              $
+              d\rho_t=\mathcal{J}_{(-iH-\frac{1}{2}L^{\dagger}L)}(\rho_t)dt+g_{L}(\rho_t)dN_t
+              \; , \;
+              g_{L}(\rho_t)=\frac{L\rho_tL^{\dagger}}{\mathrm{Tr}\big(L\rho_tL^{\dagger}\big)}-\rho_t
+              $
+            </p>
+            <p>
+              in which $N_t$ is photon counting with statistic $E(dN_t)=\langle
+              L^{\dagger}L\rangle dt$.
+            </p>
+            <h4>Quantum Control Systems</h4>
+            <p>
+              There are several well-known control design methods for quantum
+              systems such as nonlinear Lyapunov control, optimal control
+              methods and recently learning-based quantum control methods.
+            </p>
+            <p>
+              In Lyapunov control, we must find a positive definite energy-like
+              function of quantum state or unitary operator and design the
+              control vector in a way that the time derivative of this function
+              is negative definite, in this situation we have the stability
+              grantee for convergence (in a defined norm) to desired state or
+              desired unitary matrix. As an example if we consider the dynamics
+              of quantum system be described by state vector $\psi_t$ and the
+              desired state to be converge to be $\psi_d$, then we can have
+              several Lyapunov function candidates such as function of state
+              vectors distance $V=\frac{1}{2}\big(1-|\langle \psi_d|\psi_t
+              \rangle|^2 \big)$ or the function of state vectors similarity as
+              $V=\frac{1}{2}\langle \psi_t-\psi_d | \psi_t-\psi_d \rangle$.
+              Another example of quantum dynamics described by a density-matrix
+              can be as $V=\mathrm{Tr}(\rho_d^2)-\mathrm{Tr}(\rho_t\rho_d)$ and
+              in this case a Lyapunov control vector can be as:
+            </p>
+            <p>
+              $ u_n=-i\alpha_n\mathrm{Tr}([H_n,\rho_t]\rho_d) , \alpha_n >0 $.
+              As another sample, suppose we want to realize a quantum unitary
+              gate $\mathcal{O}$, then the Lyapunov function is:
+              $V(t)=1-\frac{1}{N^2}|\mathrm{Tr}(\mathcal{O}^{\dagger} U_t)|^2$,
+              then the Lyapunov stabilizing control signal is ($H=H_0+u(t)H_c$):
+              $u(t)=-\alpha
+              \mathcal{R}e\Big(\mathrm{Tr}(-i\mathcal{O}^{\dagger}H_c U_t)
+              \mathrm{Tr}(\mathcal{O}^T U_t^{\ast})\Big)$.
+            </p>
+            <p>
+              For optimal quantum control, an objective function must be defined
+              and optimal control must be designed in such a way that minimizes
+              the objective function. The control method can be based on
+              Hamilton-Jacobi-Bellman (HJB) formulation, bang-bang optimal
+              control, gradient ascent pulse engineering (GRAPE), the Krotov
+              method, or any other optimal controls. However, until l now, the
+              convergence of optimal quantum control method is not proved
+              analytically, but there is a fact in practice that optimal control
+              methods both have a faster convergence rate and better
+              performance.
+            </p>
+            <h4>Quantum Processor</h4>
+            <p>
+              To implement quantum algorithms, a set of unitary gates must be
+              realized with high fidelity with every possible longer coherence
+              time. Quantum algorithms can be developed to solve intractable
+              problems and their applications, the realization of gate-based of
+              quantum algorithms, derivation of suitable high-fidelity long
+              coherence time quantum control strategy for implementation of
+              quantum gates of quantum circuits of quantum algorithms, readouts,
+              quantum interconnection issues, and many problems encounter for
+              real physical implementations and generally a quantum operating
+              systems (QOS) to carry out user tasks both classical and quantum
+              tasks.
+            </p>
+            <p>
+              QuCTech aims to devise a quantum-computer (Instruction set)
+              architecture with such a powerful and optimized design that can be
+              used for making commercial quantum processors. Among different
+              building blocks of quantum processor instruction set architecture,
+              quantum barrel shifter, quantum bus matrix, quantum arithmetic
+              logic unit (QALU), quantum processing unit (QPU), quantum control
+              unit (QCU), quantum language programming, quantum random number
+              generator (QRNG), Quantum-GPU, Quantum-RAM(QRAM) have significant
+              priority. Several other quantum designs such as quantum neural
+              network engine(QNNE), quantum fetch unit, quantum pipeline,
+              quantum execute unit, quantum decoding are other quantum computing
+              hardware essentials to be addressed for quantum processor design.
+              All designs first will be carried out at the quantum logic gate
+              level and then in the physical device layer for optimization,
+              control, and in near future the fabrication.
+            </p>
+            <h4>Selected Publications</h4>
+            <p>
+              1- Sharifi, Javad. "Superconductor qubits Hamiltonian
+              approximations effect on quantum state evolution and control."
+              Scientific Reports 11, no. 1 (2021): 1-9.
+            </p>
+            <p>
+              2- Biderang, Mehdi, Mohammad-Hossein Zare, and Jesko Sirker.
+              "Proximity-driven ferromagnetism and superconductivity in the
+              triangular Rashba-Hubbard model." Physical Review B 105, no. 6
+              (2022): 064504.
+            </p>
+            <p>
+              3- Solaimani, M., and Shi‐Hai Dong. "Quantum information entropies
+              of multiple quantum well systems in fractional Schrödinger
+              equations." International Journal of Quantum Chemistry 120, no. 5
+              (2020): e26113.
+            </p>
+            <p>
+              4- Ghalandari, Mahboubeh, and M. Solaimani. "Wave transport in
+              fractional Schrodinger equations." Optical and Quantum Electronics
+              51, no. 9 (2019): 1-9.
+            </p>
+            <p>
+              5- Solaimani, Mahdi, and Alireza Mobini. "Spectral tuning in
+              quantum rings by magnetic field: detection from NIR to FIR
+              regime." Optical and Quantum Electronics 54, no. 3 (2022): 1-10.
+            </p>
+            <p>
+              6- Sharifi, Javad, and Hamidreza Momeni. "Lyapunov control of
+              squeezed noise quantum trajectory." Physics Letters A 375, no. 3
+              (2011): 522-528.
+            </p>
+            <p>
+              7- Sharifi, Javad, and H. Momeni. "Optimal control equation for
+              quantum stochastic differential equations." In 49th IEEE
+              Conference on Decision and Control (CDC), pp. 4839-4844. IEEE,
+              2010.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Team End -->
+
+    <!-- Footer Start -->
+    <div
+      class="container-fluid bg-dark text-white mt-0 p-1"
+      style="bottom: 0; position: fixed"
+    >
+      <div class="col-12">
+        <div class="row">
+          <div class="col-md-6">
+            <!-- <h3 class="text-primary">Get In Touch</h3> -->
+            <p>Copyright © QuCTech</p>
+            <!-- <div class="d-flex justify-content-start">
+              <a class="btn btn-outline-light btn-social mr-2" href="#"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a
+                class="btn btn-outline-light btn-social mr-2"
+                href="https://www.facebook.com/Quctech-100643789432253"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a
+                class="btn btn-outline-light btn-social mr-2"
+                href="https://www.linkedin.com/company/quctech"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a class="btn btn-outline-light btn-social mr-2" href="#"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a
+                class="btn btn-outline-light btn-social"
+                href="https://www.youtube.com/channel/UC4PoMuy30Lk55dbGOzzAbXQ"
+                ><i class="fab fa-youtube"></i
+              ></a>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer End -->
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary back-to-top"
+      ><i class="fa fa-angle-double-up"></i
+    ></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
