@@ -21,7 +21,13 @@ class UserSignUp(CreateAPIView):
         username = serializer.data.get('username')
         password = serializer.data.get('password')
 
-        if User.is_exist_user(email=username):
+        if User.methods.is_exist_user(email=username):
             return Response({'detail': 'user exists!'}, status=status.HTTP_400_BAD_REQUEST)
-        
 
+        user = User(
+            username=username
+        )
+        user.set_password(password)
+        user.save()
+
+        return Response(status=status.HTTP_201_CREATED)

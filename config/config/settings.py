@@ -28,7 +28,6 @@ INSTALLED_APPS = [
     # tools
     'rest_framework',
     'rest_framework.authtoken',
-    'rest_framework_simplejwt',
     'dj_rest_auth',
     'drf_yasg',
 ]
@@ -111,11 +110,6 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework.authentication.TokenAuthentication',
     ]
-}
-
-REST_AUTH = {
-    'SESSION_LOGIN': True,
-    'USE_JWT': False,
 }
 
 SWAGGER_SETTINGS = {

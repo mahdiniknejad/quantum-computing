@@ -7,8 +7,4 @@ from .managers import UserManager
 class EditedUser(AbstractUser):
     username = models.EmailField(_("username"), max_length=150, unique=True)
 
-    objects = UserManager()
-
-    EMAIL_FIELD = "username"
-    USERNAME_FIELD = "username"
-    REQUIRED_FIELDS = ["email"]
+    methods = UserManager()
