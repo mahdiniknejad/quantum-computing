@@ -24,6 +24,7 @@ INSTALLED_APPS = [
 
     # apps
     'users.apps.UsersConfig',
+    'files.apps.FilesConfig',
 
     # tools
     'rest_framework',
