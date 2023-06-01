@@ -27,4 +27,5 @@ urlpatterns = [
 
 
     path('user/', include('users.urls', namespace='users')),
+    path('file/', include('files.urls', namespace='files')),
 ]
