@@ -44,6 +44,9 @@ class FileViewSet(viewsets.ModelViewSet):
 		if os.path.isfile(pic):
 			Image.objects.create(image=pic.split('/')[-1], file=file)
 
+		if res == '':
+			res = 'done'
+
 		return JsonResponse({"result": res}, status=200)
 
 	@swagger_auto_schema(methods=['GET'])
