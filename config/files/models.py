@@ -13,3 +13,10 @@ class File(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 
     methods = FileManager()
+
+
+class Image(models.Model):
+    image = models.ImageField(upload_to='plots')
+    file = models.ForeignKey(File, on_delete=models.CASCADE)
+
+
