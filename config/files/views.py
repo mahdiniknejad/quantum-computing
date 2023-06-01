@@ -4,10 +4,11 @@ from subprocess import PIPE, STDOUT, run
 from django.http import JsonResponse
 from django.conf import settings
 from rest_framework import viewsets, permissions, authentication
+from rest_framework.response import Response
 from rest_framework.decorators import action
 from drf_yasg.utils import swagger_auto_schema
 from .models import File, Image
-from .serializers import FileSerializer
+from .serializers import FileSerializer, ImageSerializer
 from .modules import check_some_codes
 
 
@@ -41,7 +42,21 @@ class FileViewSet(viewsets.ModelViewSet):
 		os.system(f"rm {file_path}")
 
 		if os.path.isfile(pic):
-			print('here')
-			Image.objects.create(image=pic, file=file)
+			Image.objects.create(image=pic.split('/')[-1], file=file)
 
 		return JsonResponse({"result": res}, status=200)
+
+	@swagger_auto_schema(methods=['GET'])
+	@action(methods=['get'], detail=True)
+	def get_images(self, request, pk, *args, **kwargs):
+		file = File.methods.filter(id=pk).first()
+		return Response(ImageSerializer(file.image_set.all(), many=True).data, status=200)
+
+
+class ImageViewSet(viewsets.mixins.DestroyModelMixin, viewsets.GenericViewSet):
+	permission_classes = (permissions.IsAuthenticated,)
+	authentication_classes = (authentication.TokenAuthentication, )
+	serializer_class = ImageSerializer
+
+	def get_queryset(self):
+		return Image.objects.filter(file__user=self.request.user)
