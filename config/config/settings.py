@@ -123,6 +123,7 @@ REST_FRAMEWORK = {
 
 SWAGGER_SETTINGS = {
     'USE_SESSION_AUTH': True,
+    'DEFAULT_API_URL': 'https://api.quctech.com',
     'SECURITY_DEFINITIONS': {
         'Token': {
             'type': 'apiKey',
