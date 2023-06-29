@@ -23,7 +23,10 @@ class FileViewSet(viewsets.ModelViewSet):
 	serializer_class = FileSerializer
 
 	def get_queryset(self):
-		return self.request.user.file_set.all()
+		if self.request.user:
+			return self.request.user.file_set.all()
+		else:
+			return None
 
 	@swagger_auto_schema(methods=['POST'])
 	@action(methods=['post'], detail=True)
