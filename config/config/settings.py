@@ -29,14 +29,15 @@ INSTALLED_APPS = [
     # tools
     'rest_framework',
     'rest_framework.authtoken',
+    'corsheaders',
     'dj_rest_auth',
     'drf_yasg',
-    'corsheaders',
 ]
 
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
+    
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -131,14 +132,8 @@ SWAGGER_SETTINGS = {
     }
 }
 
+CORS_ALLOWED_ORIGINS = ['http://*', 'https://*']
+CSRF_TRUSTED_ORIGINS = ['http://*', 'https://*', 'https://api.quctech.com/*', 'https://quctech.com/*', 'http://127.0.0.1']
 CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOW_CREDENTIALS = True
-CSRF_TRUSTED_ALL_ORIGINS = True
-CORS_ALLOW_METHODS = (
-    "DELETE",
-    "GET",
-    "OPTIONS",
-    "PATCH",
-    "POST",
-    "PUT",
-)
+CORS_ORIGIN_WHITELIST = ['*']
