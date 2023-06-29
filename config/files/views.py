@@ -66,4 +66,5 @@ class ImageViewSet(viewsets.mixins.DestroyModelMixin, viewsets.GenericViewSet):
 	serializer_class = ImageSerializer
 
 	def get_queryset(self):
-		return Image.objects.filter(file__user=self.request.user)
+		if not isinstance(self.request.user, AnonymousUser):
+			return Image.objects.filter(file__user=self.request.user)
