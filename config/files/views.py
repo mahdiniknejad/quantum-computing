@@ -24,7 +24,7 @@ class FileViewSet(viewsets.ModelViewSet):
 	serializer_class = FileSerializer
 
 	def get_queryset(self):
-		if self.request.user is not AnonymousUser:
+		if not isinstance(self.request.user, AnonymousUser):
 			return self.request.user.file_set.all()
 		else:
 			return None
