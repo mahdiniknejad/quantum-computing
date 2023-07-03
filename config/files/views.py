@@ -9,8 +9,8 @@ from rest_framework.response import Response
 from rest_framework.decorators import action
 from drf_yasg.utils import swagger_auto_schema
 from .models import File, Image
-from .serializers import FileSerializer, ImageSerializer
-from .modules import check_some_codes
+from .serializers import FileSerializer, ImageSerializer, PackageInstallerSerializer
+from .modules import check_some_codes, check_security
 
 
 def out(command):
@@ -37,6 +37,10 @@ class FileViewSet(viewsets.ModelViewSet):
         file = File.methods.filter(id=pk).first()
         code = file.code
         code, pic = check_some_codes(code)
+
+        if not check_security(code):
+            return JsonResponse({"result": "bad module imported"}, status=200)
+
         temp_name = str(random.randint(10000, 99999)) + ".py"
         file_path = str(settings.BASE_DIR) + "/code/" + temp_name
 
@@ -73,13 +77,20 @@ class ImageViewSet(viewsets.mixins.DestroyModelMixin, viewsets.GenericViewSet):
             return Image.objects.filter(file__user=self.request.user)
 
 
-# class PackageInstallerAPIView(
-#     viewsets.mixins.CreateModelMixin, viewsets.GenericViewSet
-# ):
-#     permission_classes = (permissions.IsAuthenticated,)
-#     authentication_classes = (authentication.TokenAuthentication,)
-#     serializer_class = ImageSerializer
+class PackageInstallerAPIView(
+    viewsets.mixins.CreateModelMixin, viewsets.GenericViewSet
+):
+    permission_classes = (permissions.IsAuthenticated,)
+    authentication_classes = (authentication.TokenAuthentication,)
+    serializer_class = PackageInstallerSerializer
 
-#     def get_queryset(self):
-#         if not isinstance(self.request.user, AnonymousUser):
-#             return Image.objects.filter(file__user=self.request.user)
+    def create(self, request, *args, **kwargs):
+        serializer = self.get_serializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+
+        package = serializer.data.get("package")
+
+        res = out(f"pip install {package}")
+        out(f"pip freeze > req.txt")
+
+        return JsonResponse({"result": res}, status=200)

@@ -14,19 +14,18 @@ class UserSignUp(CreateAPIView):
     serializer_class = SignupSerializer
 
     def create(self, request, *args, **kwargs):
-
         serializer = self.get_serializer(data=request.data)
         serializer.is_valid(raise_exception=True)
 
-        username = serializer.data.get('username')
-        password = serializer.data.get('password')
+        username = serializer.data.get("username")
+        password = serializer.data.get("password")
 
         if User.methods.is_exist_user(username=username):
-            return Response({'detail': 'user exists!'}, status=status.HTTP_400_BAD_REQUEST)
+            return Response(
+                {"detail": "user exists!"}, status=status.HTTP_400_BAD_REQUEST
+            )
 
-        user = User(
-            username=username
-        )
+        user = User(username=username)
         user.set_password(password)
         user.save()
 
