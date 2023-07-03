@@ -73,13 +73,13 @@ class ImageViewSet(viewsets.mixins.DestroyModelMixin, viewsets.GenericViewSet):
             return Image.objects.filter(file__user=self.request.user)
 
 
-class PackageInstallerAPIView(
-    viewsets.mixins.CreateModelMixin, viewsets.GenericViewSet
-):
-    permission_classes = (permissions.IsAuthenticated,)
-    authentication_classes = (authentication.TokenAuthentication,)
-    serializer_class = ImageSerializer
+# class PackageInstallerAPIView(
+#     viewsets.mixins.CreateModelMixin, viewsets.GenericViewSet
+# ):
+#     permission_classes = (permissions.IsAuthenticated,)
+#     authentication_classes = (authentication.TokenAuthentication,)
+#     serializer_class = ImageSerializer
 
-    def get_queryset(self):
-        if not isinstance(self.request.user, AnonymousUser):
-            return Image.objects.filter(file__user=self.request.user)
+#     def get_queryset(self):
+#         if not isinstance(self.request.user, AnonymousUser):
+#             return Image.objects.filter(file__user=self.request.user)
