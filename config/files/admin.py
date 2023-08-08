@@ -9,7 +9,7 @@ class FileAdmin(admin.ModelAdmin):
 
 
 class ImageAdmin(admin.ModelAdmin):
-    list_display = ["file__id"]
+    list_display = ["id"]
 
 
 admin.site.register(File, FileAdmin)

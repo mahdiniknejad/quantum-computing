@@ -1,7 +1,7 @@
 version: "3.7"
 
 services:
-  
+
   server:
     build: "./config"
     container_name: "server"
@@ -20,10 +20,9 @@ services:
         python3 manage.py createsuperuser --noinput; \
         gunicorn -b 0.0.0.0:8000 config.wsgi --log-level debug --reload
       "
-    
+
     env_file:
       - .env
-
 
   nginx:
     build: "./nginx"
