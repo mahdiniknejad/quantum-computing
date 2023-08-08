@@ -24,6 +24,7 @@ INSTALLED_APPS = [
     # apps
     "users.apps.UsersConfig",
     "files.apps.FilesConfig",
+    "documentation.apps.DocumentationConfig",
     # tools
     "rest_framework",
     "rest_framework.authtoken",
