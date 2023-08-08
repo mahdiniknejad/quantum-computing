@@ -4,7 +4,7 @@ from .models import Doc
 from .serializers import ImageSerializer
 
 
-class ImageViewSet(viewsets.mixins.ListModelMixin, viewsets.GenericViewSet):
+class DocViewSet(viewsets.mixins.ListModelMixin, viewsets.GenericViewSet):
     permission_classes = (permissions.AllowAny,)
     serializer_class = ImageSerializer
 
