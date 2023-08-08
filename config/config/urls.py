@@ -31,7 +31,7 @@ urlpatterns = [
     ),
     path("user/", include("users.urls", namespace="users")),
     path("file/", include("files.urls", namespace="files")),
-    path("docs/", include("documentation.urls", namespace="docs")),
+    path("documentation/", include("documentation.urls", namespace="docs")),
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
