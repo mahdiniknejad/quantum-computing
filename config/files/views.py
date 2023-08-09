@@ -10,7 +10,7 @@ from rest_framework.decorators import action
 from drf_yasg.utils import swagger_auto_schema
 from .models import File, Image
 from .serializers import FileSerializer, ImageSerializer, PackageInstallerSerializer
-from .modules import check_some_codes, check_security
+from .modules import check_some_codes, check_security, handle_the_quotes
 
 
 def out(command):
@@ -40,6 +40,8 @@ class FileViewSet(viewsets.ModelViewSet):
 
         if not check_security(code):
             return JsonResponse({"result": "bad module imported"}, status=200)
+
+        code = handle_the_quotes(code)
 
         temp_name = str(random.randint(10000, 99999)) + ".py"
         file_path = str(settings.BASE_DIR) + "/code/" + temp_name

@@ -2,7 +2,7 @@ import random
 from django.conf import settings
 
 
-def check_some_codes(code):
+def check_some_codes(code: str) -> str:
     pic = (
         str(settings.BASE_DIR)
         + "/static_cdn/media_root/"
@@ -14,7 +14,7 @@ def check_some_codes(code):
     return precode + code, pic
 
 
-def check_security(code):
+def check_security(code: str) -> bool:
     bad_codes = (
         "import os",
         "from os",
@@ -31,3 +31,7 @@ def check_security(code):
         return False
 
     return True
+
+
+def handle_the_quotes(code: str) -> str:
+    return code.replace('"', "'")
