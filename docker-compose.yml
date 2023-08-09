@@ -32,7 +32,9 @@ services:
       - "80:80"
       - "443:443"
 
-    volumes:
-      - type: "bind"
-        source: "./frontend_build"
-        target: "/home/html"
+  client:
+    build: "./frontend_build"
+    container_name: "client"
+    restart: "always"
+    ports:
+      - "3000:3000"
